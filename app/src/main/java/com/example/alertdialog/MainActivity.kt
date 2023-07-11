@@ -15,27 +15,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnAlert = findViewById(R.id.btnAlert)
+        tvNumber = findViewById(R.id.tvNumber)
 
-       btnAlert?.setOnClickListener {
+
+       btnAlert.setOnClickListener {
 
             val alert = AlertDialog.Builder(this)
             alert.setTitle("Testing Alert")
-
-            alert.setCancelable(false)
-            alert.setPositiveButton("Add") { _, _ ->
+           alert.setMessage("select an action")
+            //alert.setCancelable(false)
+            alert.setPositiveButton("Add") { _,_ ->
                 Toast.makeText(this, "2 Added", Toast.LENGTH_LONG).show()
                 num += 2
-                tvNumber?.setText(num)
+                tvNumber.text=num.toString()
             }
-            alert.setNegativeButton("Sub") { _, _ ->
+            alert.setNegativeButton("Sub") { _,_ ->
                 Toast.makeText(this, "2 Subtracted", Toast.LENGTH_LONG).show()
                 num -= 2
-                tvNumber?.setText(num)
+                tvNumber.text=num.toString()
             }
-            alert.setNeutralButton("Clear") { _, _ ->
+            alert.setNeutralButton("Clear") { _,_ ->
                 Toast.makeText(this, "Cleared", Toast.LENGTH_LONG).show()
                 num = 0
-                tvNumber?.setText(num)
+                tvNumber.text=num.toString()
             }
           alert.show()
         }
