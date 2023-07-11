@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-       // btnAlert?.setOnClickListener {
+       btnAlert?.setOnClickListener {
 
             val alert = AlertDialog.Builder(this)
             alert.setTitle("Testing Alert")
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 tvNumber?.setText(num)
             }
           alert.show()
-        //}
+        }
     }
 
     }
