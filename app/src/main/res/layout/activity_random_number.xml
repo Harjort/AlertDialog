@@ -4,36 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RandomNumber">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alert"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/btnAlert"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:text="0"
-        app:layout_constraintBottom_toTopOf="@id/btnAlert"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Random Charater Generator"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="30sp"
-        android:id="@+id/tvNumber"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:id="@+id/Start"
+        android:paddingTop="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NULL"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:padding="10sp"
+        android:id="@+id/tvData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Start"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGenerate"/>
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btnAlert"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Next"
-        android:id="@+id/btnNext"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="50sp"
+        android:text="Generate"
+        android:id="@+id/btnGenerate" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
